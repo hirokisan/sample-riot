@@ -1,0 +1,23 @@
+{
+  "name": "sample-riot",
+  "version": "1.0.0",
+  "description": "sample riot",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack -w",
+    "lite": "lite-server",
+    "start": "concurrently \"npm run lite\" \"npm run webpack\""
+  },
+  "author": "hiroki ueno",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "concurrently": "^2.2.0",
+    "lite-server": "^2.2.2",
+    "riot": "^2.5.0",
+    "riotjs-loader": "^3.0.0",
+    "webpack": "^1.13.1"
+  }
+}
