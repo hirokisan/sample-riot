@@ -1,6 +1,7 @@
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-module.exports = {
+module.exports = [{
   entry: './src/scripts/index.js',
   output: {
     path: __dirname + '/app/scripts',
@@ -23,7 +24,8 @@ module.exports = {
       test: /\.js$|\.tag$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
-    }
+    },
+    { test: /\.jade$/, loader: 'jade' }
     ]
   },
   resolve: {
@@ -35,4 +37,24 @@ module.exports = {
       riot: 'riot'
     })
   ]
-}
+}, {
+  entry: './src/sass/sample.scss',
+  output: {
+    path: __dirname + '/public/css',
+    filename: 'main.css',
+    publicPath: '/public/',
+  },
+  module: {
+    loaders: [
+    {
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+    },
+    { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader") }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin("main.css")
+  ]
+}];
+
