@@ -1,5 +1,9 @@
 # Sample-riot.js
 
+## version
+- npm 3.10.3
+- node 6.4.0
+
 ## pre set up
 - install npm
 

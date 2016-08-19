@@ -15,9 +15,25 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015-riot": "^1.1.0",
     "concurrently": "^2.2.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-ruby-sass": "^2.1.0",
     "lite-server": "^2.2.2",
+    "node-sass": "^3.8.0",
+    "path": "^0.12.7",
     "riot": "^2.5.0",
     "riotjs-loader": "^3.0.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1"
   }
 }
